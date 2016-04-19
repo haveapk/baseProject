@@ -1,0 +1,16 @@
+//font.less
+
+//Load default font
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,900,700); //Change this url to the default font
+@defaultFont : 'Roboto', sans-serif; // Change this font family
+
+.setHeadings(@counter) when (@counter > 0) {
+  .setHeadings((@counter - 1));    // next iteration
+  //width: (10px * @counter); // code for each iteration
+  h@{counter}{font-family: @defaultFont; font-weight: bold;};
+}
+
+.setHeadings(6);
+body, p, span, ul, li, ol, a{
+	font-family: @defaultFont;
+}
